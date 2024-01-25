@@ -51,19 +51,17 @@
                     </div>
                 </div>
                 
-                <div class="mt-16">
-                    {{-- todo: make list with DB data --}}
+                <div class="mt-4">
                     <div class="md:grid-cols-2 gap-6 lg:gap-8">
                         <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div>
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Create</h2>
-                                <p class="mt-4 mb-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">make data</p>
+                                <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Create</h2>
 
                                 <form action="/store" method="post">
                                     @csrf
                                     <div class="mt-4">
-                                        <label for="name" class="dark:text-white">Name</label>
-                                        <input type="name" id="name">
+                                        <label for="title" class="dark:text-white">Name</label>
+                                        <input type="text" id="title" name="title">
                                     </div>
                                     <div class="mt-4">
                                         <input type="submit" value="Submit" class="dark:text-white border border-white">

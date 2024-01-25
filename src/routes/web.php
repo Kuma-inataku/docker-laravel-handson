@@ -15,19 +15,13 @@ use App\Http\Controllers\SampleController;
 */
 
 // index
-Route::get('/', function () {
-    return view('index');
-})->name("index");
+Route::get('/', [SampleController::class, 'index'])->name("index");
 
-// todo: show
-Route::get('/show', function () {
-    return view('show');
-});
+// // todo: show
+// Route::get('/show', [SampleController::class, 'show'])->name("show");
 
 // create
-Route::get('/create', function () {
-    return view('create');
-})->name("create");
+Route::get('/create', [SampleController::class, 'create'])->name("create");
 
 // store
 Route::post('/store', [SampleController::class, 'store'])->name("store");
