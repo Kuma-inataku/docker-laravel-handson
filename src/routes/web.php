@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SampleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// index
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+})->name("index");
+
+// todo: show
+Route::get('/show', function () {
+    return view('show');
 });
+
+// create
+Route::get('/create', function () {
+    return view('create');
+})->name("create");
+
+// store
+Route::post('/store', [SampleController::class, 'store'])->name("store");
