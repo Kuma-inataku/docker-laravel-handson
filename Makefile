@@ -1,3 +1,4 @@
+# docker
 install:
 	@make clean
 	@make build
@@ -16,9 +17,13 @@ up:
 	docker compose up -d
 down:
 	docker compose down
-fresh:
-	docker compose exec app php artisan migrate:fresh --seed
+
+# app 
 app:
 	docker compose exec app bash
+fresh:
+	docker compose exec app php artisan migrate:fresh --seed
+
+# db
 sql:
 	docker compose exec db bash -c 'mysql -u $$MYSQL_USER -p$$MYSQL_PASSWORD $$MYSQL_DATABASE'
