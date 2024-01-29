@@ -14,6 +14,10 @@ use App\Http\Controllers\SampleController;
 |
 */
 
+// todo: remove later
+// sample
+Route::get('/sample', [SampleController::class, 'sample'])->name("sample");
+
 // index
 Route::get('/', [SampleController::class, 'index'])->name("index");
 

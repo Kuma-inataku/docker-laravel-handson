@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class SampleController extends Controller
 {
+    // todo: delete later
+    public function sample()
+    {
+        return view('sample');
+    }
+
     public function index()
     {
         $samples = Sample::all();
